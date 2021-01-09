@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-01-03T08:50:12.963Z",
+    "end": "2021-01-03T08:50:18.700Z",
+    "duration": 5737,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5aea72d9-edc5-4f8d-86f1-b3d33000e593",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\conduitTestXHR.js",
+      "file": "cypress\\integration\\examples\\conduitTestXHR.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "92ab0aa3-bbfa-4ffc-9a71-852e193d343f",
+          "title": "Conduit user login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify login response XHR",
+              "fullTitle": "Conduit user login Verify login response XHR",
+              "timedOut": null,
+              "duration": 3558,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.server();\ncy.route({\n  method: 'POST',\n  url: 'https://conduit.productionready.io/api/users/login'\n}).as('login'); //click on login link\ncy.contains(\"Sign in\").click();\ncy.get(\"input[placeholder='Email']\").type(\"yprasad@woolworths.com.au\");\ncy.get(\"input[placeholder='Password']\").type(\"String12\");\ncy.get(\"button[type='Submit']\").click();\ncy.get(\"a[href='#@Yankush']\").should(function ($loginName) {\n  var loginHeaderName = $loginName.text();\n  expect(loginHeaderName).to.include('Yankush');\n});\ncy.get('@login').then(function (loginXHR) {\n  expect(loginXHR.status).to.eq(200);\n  expect(loginXHR.response.body).to.have.property('user');\n});",
+              "err": {},
+              "uuid": "db84ed0b-affb-48e3-babf-e0265c7e7230",
+              "parentUUID": "92ab0aa3-bbfa-4ffc-9a71-852e193d343f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "db84ed0b-affb-48e3-babf-e0265c7e7230"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3558,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reporterDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

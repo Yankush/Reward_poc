@@ -1,0 +1,839 @@
+{
+  "stats": {
+    "suites": 11,
+    "tests": 19,
+    "passes": 19,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-01-03T07:30:20.764Z",
+    "end": "2021-01-03T08:50:28.864Z",
+    "duration": 146099,
+    "testsRegistered": 19,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e276965c-c1ac-4f0e-9200-9afeba73fb0d",
+      "title": "",
+      "fullFile": "cypress\\integration\\cucumber\\conduitLogin.feature",
+      "file": "cypress\\integration\\cucumber\\conduitLogin.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c832f4b3-36ec-42dc-bc8a-28114fa1e584",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sign in conduit application",
+              "fullTitle": "Login Sign in conduit application",
+              "timedOut": null,
+              "duration": 15835,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "e6dc82ae-bda0-4f71-b1ab-9fbc70acc389",
+              "parentUUID": "c832f4b3-36ec-42dc-bc8a-28114fa1e584",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test login feature via page object",
+              "fullTitle": "Login Test login feature via page object",
+              "timedOut": null,
+              "duration": 2777,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "1e5a0d1f-86b0-45e8-bf8e-5f823ad72943",
+              "parentUUID": "c832f4b3-36ec-42dc-bc8a-28114fa1e584",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e6dc82ae-bda0-4f71-b1ab-9fbc70acc389",
+            "1e5a0d1f-86b0-45e8-bf8e-5f823ad72943"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18612,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "3dd85ff8-f8c8-4a0a-a1fe-7f492f007024",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\conduitLogin.js",
+      "file": "cypress\\integration\\examples\\conduitLogin.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dc358eb4-9edf-49d5-9209-d0f66095913b",
+          "title": "Testing conduit application",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login into conduit",
+              "fullTitle": "Testing conduit application Login into conduit",
+              "timedOut": null,
+              "duration": 6791,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//click on login link\ncy.contains(\"Sign in\").click();\ncy.get(\"input[placeholder='Email']\").type(\"yprasad@woolworths.com.au\");\ncy.get(\"input[placeholder='Password']\").type(\"String12\");\ncy.get(\"button[type='Submit']\").click();\ncy.get(\"a[href='#@Yankush']\").should(function ($loginName) {\n  var loginHeaderName = $loginName.text();\n  expect(loginHeaderName).to.include('Yankush');\n});",
+              "err": {},
+              "uuid": "9fe6fbc1-5b14-4ca1-b1db-c4d468176c3c",
+              "parentUUID": "dc358eb4-9edf-49d5-9209-d0f66095913b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login into conduit using parameterization",
+              "fullTitle": "Testing conduit application Login into conduit using parameterization",
+              "timedOut": null,
+              "duration": 2815,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//click on login link\ncy.contains(\"Sign in\").click();\ncy.get(\"@user\").then(function (user) {\n  cy.get(\"input[placeholder='Email']\").type(user.userName);\n  cy.get(\"input[placeholder='Password']\").type(user.password);\n});\ncy.get(\"button[type='Submit']\").click();\ncy.get(\"a[href='#@Yankush']\").should(function ($loginName) {\n  var loginHeaderName = $loginName.text();\n  expect(loginHeaderName).to.include('Yankush');\n});",
+              "err": {},
+              "uuid": "7b1ffb7e-3616-4d7a-90dc-78f0154fb0eb",
+              "parentUUID": "dc358eb4-9edf-49d5-9209-d0f66095913b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9fe6fbc1-5b14-4ca1-b1db-c4d468176c3c",
+            "7b1ffb7e-3616-4d7a-90dc-78f0154fb0eb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9606,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "f06cc739-9ad6-4826-ae46-23aad943a552",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\conduitTestXHR.js",
+      "file": "cypress\\integration\\examples\\conduitTestXHR.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fa04a308-fe16-45cf-803c-a0d6eb22a267",
+          "title": "Conduit user login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify login response XHR",
+              "fullTitle": "Conduit user login Verify login response XHR",
+              "timedOut": null,
+              "duration": 8509,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.server();\ncy.route({\n  method: 'POST',\n  url: 'https://conduit.productionready.io/api/users/login'\n}).as('login'); //click on login link\ncy.contains(\"Sign in\").click();\ncy.get(\"input[placeholder='Email']\").type(\"yprasad@woolworths.com.au\");\ncy.get(\"input[placeholder='Password']\").type(\"String12\");\ncy.get(\"button[type='Submit']\").click();\ncy.get(\"a[href='#@Yankush']\").should(function ($loginName) {\n  var loginHeaderName = $loginName.text();\n  expect(loginHeaderName).to.include('Yankush');\n});\ncy.get('@login').then(function (loginXHR) {\n  expect(loginXHR.status).to.eq(200);\n  expect(loginXHR.response.body).to.have.property('user');\n});",
+              "err": {},
+              "uuid": "4ba39a3b-b684-44c5-a744-140687bb78cc",
+              "parentUUID": "fa04a308-fe16-45cf-803c-a0d6eb22a267",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4ba39a3b-b684-44c5-a744-140687bb78cc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8509,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "10cdce0b-d113-4ef5-a4cc-6bc3fb74e2b5",
+      "title": "",
+      "fullFile": "cypress\\integration\\cucumber\\conduitLogin.feature",
+      "file": "cypress\\integration\\cucumber\\conduitLogin.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "65538d79-daab-4960-9642-f56ff6ec294a",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sign in conduit application",
+              "fullTitle": "Login Sign in conduit application",
+              "timedOut": null,
+              "duration": 18203,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "6dd4d189-f434-456d-b906-aeff5bf376d2",
+              "parentUUID": "65538d79-daab-4960-9642-f56ff6ec294a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test login feature via page object",
+              "fullTitle": "Login Test login feature via page object",
+              "timedOut": null,
+              "duration": 2432,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "4600adb6-bbfc-4c14-9978-17ad3c081995",
+              "parentUUID": "65538d79-daab-4960-9642-f56ff6ec294a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6dd4d189-f434-456d-b906-aeff5bf376d2",
+            "4600adb6-bbfc-4c14-9978-17ad3c081995"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 20635,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "42baa23c-d830-4719-9c22-1d757bb224e0",
+      "title": "",
+      "fullFile": "cypress\\integration\\cucumber\\conduitLogin.feature",
+      "file": "cypress\\integration\\cucumber\\conduitLogin.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fa6775b3-2240-4a4f-af65-848ba395bf38",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sign in conduit application",
+              "fullTitle": "Login Sign in conduit application",
+              "timedOut": null,
+              "duration": 15936,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "ae0ed85a-fe06-4bfb-a59d-7def80936700",
+              "parentUUID": "fa6775b3-2240-4a4f-af65-848ba395bf38",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test login feature via page object",
+              "fullTitle": "Login Test login feature via page object",
+              "timedOut": null,
+              "duration": 2691,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "297ca257-cd3a-456a-beb3-e25931259a1c",
+              "parentUUID": "fa6775b3-2240-4a4f-af65-848ba395bf38",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ae0ed85a-fe06-4bfb-a59d-7def80936700",
+            "297ca257-cd3a-456a-beb3-e25931259a1c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18627,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ea65e042-9c6d-450d-9872-fc4d478732db",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\conduitLogin.js",
+      "file": "cypress\\integration\\examples\\conduitLogin.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c38539e0-5160-40ba-b33e-d38079381859",
+          "title": "Testing conduit application",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login into conduit",
+              "fullTitle": "Testing conduit application Login into conduit",
+              "timedOut": null,
+              "duration": 8693,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//click on login link\ncy.contains(\"Sign in\").click();\ncy.get(\"input[placeholder='Email']\").type(\"yprasad@woolworths.com.au\");\ncy.get(\"input[placeholder='Password']\").type(\"String12\");\ncy.get(\"button[type='Submit']\").click();\ncy.get(\"a[href='#@Yankush']\").should(function ($loginName) {\n  var loginHeaderName = $loginName.text();\n  expect(loginHeaderName).to.include('Yankush');\n});",
+              "err": {},
+              "uuid": "70342550-43bf-48f8-ac65-02180cdbe723",
+              "parentUUID": "c38539e0-5160-40ba-b33e-d38079381859",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login into conduit using parameterization",
+              "fullTitle": "Testing conduit application Login into conduit using parameterization",
+              "timedOut": null,
+              "duration": 2787,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//click on login link\ncy.contains(\"Sign in\").click();\ncy.get(\"@user\").then(function (user) {\n  cy.get(\"input[placeholder='Email']\").type(user.userName);\n  cy.get(\"input[placeholder='Password']\").type(user.password);\n});\ncy.get(\"button[type='Submit']\").click();\ncy.get(\"a[href='#@Yankush']\").should(function ($loginName) {\n  var loginHeaderName = $loginName.text();\n  expect(loginHeaderName).to.include('Yankush');\n});",
+              "err": {},
+              "uuid": "901b5055-be9d-44e0-bf0c-65c561c38c43",
+              "parentUUID": "c38539e0-5160-40ba-b33e-d38079381859",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "70342550-43bf-48f8-ac65-02180cdbe723",
+            "901b5055-be9d-44e0-bf0c-65c561c38c43"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11480,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "9496bce8-ca2d-424b-82cc-3490f9bde9a7",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\conduitTestXHR.js",
+      "file": "cypress\\integration\\examples\\conduitTestXHR.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "546ed833-13ea-4269-8b38-5510c1be4f90",
+          "title": "Conduit user login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify login response XHR",
+              "fullTitle": "Conduit user login Verify login response XHR",
+              "timedOut": null,
+              "duration": 9035,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.server();\ncy.route({\n  method: 'POST',\n  url: 'https://conduit.productionready.io/api/users/login'\n}).as('login'); //click on login link\ncy.contains(\"Sign in\").click();\ncy.get(\"input[placeholder='Email']\").type(\"yprasad@woolworths.com.au\");\ncy.get(\"input[placeholder='Password']\").type(\"String12\");\ncy.get(\"button[type='Submit']\").click();\ncy.get(\"a[href='#@Yankush']\").should(function ($loginName) {\n  var loginHeaderName = $loginName.text();\n  expect(loginHeaderName).to.include('Yankush');\n});\ncy.get('@login').then(function (loginXHR) {\n  expect(loginXHR.status).to.eq(200);\n  expect(loginXHR.response.body).to.have.property('user');\n});",
+              "err": {},
+              "uuid": "6d3b2fef-2965-4f39-a6e9-1808967624c4",
+              "parentUUID": "546ed833-13ea-4269-8b38-5510c1be4f90",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6d3b2fef-2965-4f39-a6e9-1808967624c4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9035,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "cb653fd0-454a-4eed-b885-145f64cafe3e",
+      "title": "",
+      "fullFile": "cypress\\integration\\cucumber\\conduitLogin.feature",
+      "file": "cypress\\integration\\cucumber\\conduitLogin.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ba53b502-1bcc-47c8-9136-8beaaec7d294",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sign in conduit application",
+              "fullTitle": "Login Sign in conduit application",
+              "timedOut": null,
+              "duration": 15769,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "179e64ea-38c2-48ca-aaf0-c6c3cc0a6683",
+              "parentUUID": "ba53b502-1bcc-47c8-9136-8beaaec7d294",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test login feature via page object",
+              "fullTitle": "Login Test login feature via page object",
+              "timedOut": null,
+              "duration": 2598,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "5bf2c904-5a6a-45eb-acb4-50cddf8f3c65",
+              "parentUUID": "ba53b502-1bcc-47c8-9136-8beaaec7d294",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "179e64ea-38c2-48ca-aaf0-c6c3cc0a6683",
+            "5bf2c904-5a6a-45eb-acb4-50cddf8f3c65"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18367,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "4116cac5-b7fd-41f1-adbf-4f0259f5a213",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\conduitLogin.js",
+      "file": "cypress\\integration\\examples\\conduitLogin.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4089f054-2745-4c61-9e16-b5a8b7f9339d",
+          "title": "Testing conduit application",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login into conduit",
+              "fullTitle": "Testing conduit application Login into conduit",
+              "timedOut": null,
+              "duration": 4088,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//click on login link\ncy.contains(\"Sign in\").click();\ncy.get(\"input[placeholder='Email']\").type(\"yprasad@woolworths.com.au\");\ncy.get(\"input[placeholder='Password']\").type(\"String12\");\ncy.get(\"button[type='Submit']\").click();\ncy.get(\"a[href='#@Yankush']\").should(function ($loginName) {\n  var loginHeaderName = $loginName.text();\n  expect(loginHeaderName).to.include('Yankush');\n});",
+              "err": {},
+              "uuid": "f48c2559-8ea4-48a9-a653-3ba5aaa51004",
+              "parentUUID": "4089f054-2745-4c61-9e16-b5a8b7f9339d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login into conduit using parameterization",
+              "fullTitle": "Testing conduit application Login into conduit using parameterization",
+              "timedOut": null,
+              "duration": 5427,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//click on login link\ncy.contains(\"Sign in\").click();\ncy.get(\"@user\").then(function (user) {\n  cy.get(\"input[placeholder='Email']\").type(user.userName);\n  cy.get(\"input[placeholder='Password']\").type(user.password);\n});\ncy.get(\"button[type='Submit']\").click();\ncy.get(\"a[href='#@Yankush']\").should(function ($loginName) {\n  var loginHeaderName = $loginName.text();\n  expect(loginHeaderName).to.include('Yankush');\n});",
+              "err": {},
+              "uuid": "93c157c8-2195-4ae2-8341-425ff2580696",
+              "parentUUID": "4089f054-2745-4c61-9e16-b5a8b7f9339d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f48c2559-8ea4-48a9-a653-3ba5aaa51004",
+            "93c157c8-2195-4ae2-8341-425ff2580696"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9515,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "5aea72d9-edc5-4f8d-86f1-b3d33000e593",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\conduitTestXHR.js",
+      "file": "cypress\\integration\\examples\\conduitTestXHR.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "92ab0aa3-bbfa-4ffc-9a71-852e193d343f",
+          "title": "Conduit user login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify login response XHR",
+              "fullTitle": "Conduit user login Verify login response XHR",
+              "timedOut": null,
+              "duration": 3558,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.server();\ncy.route({\n  method: 'POST',\n  url: 'https://conduit.productionready.io/api/users/login'\n}).as('login'); //click on login link\ncy.contains(\"Sign in\").click();\ncy.get(\"input[placeholder='Email']\").type(\"yprasad@woolworths.com.au\");\ncy.get(\"input[placeholder='Password']\").type(\"String12\");\ncy.get(\"button[type='Submit']\").click();\ncy.get(\"a[href='#@Yankush']\").should(function ($loginName) {\n  var loginHeaderName = $loginName.text();\n  expect(loginHeaderName).to.include('Yankush');\n});\ncy.get('@login').then(function (loginXHR) {\n  expect(loginXHR.status).to.eq(200);\n  expect(loginXHR.response.body).to.have.property('user');\n});",
+              "err": {},
+              "uuid": "db84ed0b-affb-48e3-babf-e0265c7e7230",
+              "parentUUID": "92ab0aa3-bbfa-4ffc-9a71-852e193d343f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "db84ed0b-affb-48e3-babf-e0265c7e7230"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3558,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "bc15e110-02b2-4747-990c-27d637dd969f",
+      "title": "",
+      "fullFile": "cypress\\integration\\cucumber\\conduitLogin.feature",
+      "file": "cypress\\integration\\cucumber\\conduitLogin.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "372d5ed8-6f93-4417-9aab-f9f474541d47",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sign in conduit application",
+              "fullTitle": "Login Sign in conduit application",
+              "timedOut": null,
+              "duration": 15076,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "5182621b-6d78-4ff3-8ba5-78a46fc29012",
+              "parentUUID": "372d5ed8-6f93-4417-9aab-f9f474541d47",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test login feature via page object",
+              "fullTitle": "Login Test login feature via page object",
+              "timedOut": null,
+              "duration": 3079,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "bccdc1fa-767d-41cb-8171-a01289f43d86",
+              "parentUUID": "372d5ed8-6f93-4417-9aab-f9f474541d47",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5182621b-6d78-4ff3-8ba5-78a46fc29012",
+            "bccdc1fa-767d-41cb-8171-a01289f43d86"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18155,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reporterDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

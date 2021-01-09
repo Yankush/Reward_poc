@@ -1,0 +1,18 @@
+{
+    "video": true,
+    "screenshotsFolder": "/app/cypress/videos/examples",
+    "baseUrl": "http://eaapp.somee.com",
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "reporterEnabled":"mochawesome",
+        "mochawesomeReporterOptions": {
+            "reporterDir": "cypress/reports/mocha",
+            "quiet": true,
+            "overwrite": false,
+            "html": false,
+            "json": true
+        }
+    }
+}
+
+    
